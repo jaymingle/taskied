@@ -16,6 +16,13 @@ function App() {
         name: 'Kwame Nsoh'
     }
 
+    function showName(name: string){
+        console.log(name)
+        alert(name)
+    }
+
+
+
   return (
     <>
         <p>The name of the project owner is {projectOwnerName}</p>
