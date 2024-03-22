@@ -21,7 +21,7 @@ function App() {
         alert(name)
     }
 
-
+    showName('Jay Mingle')
 
   return (
     <>
