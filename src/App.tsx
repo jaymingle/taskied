@@ -18,7 +18,6 @@ function App() {
 
     function showName(name: string){
         console.log(name)
-        alert(name)
     }
 
     showName('Jay Mingle')
