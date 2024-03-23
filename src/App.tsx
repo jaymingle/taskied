@@ -29,6 +29,7 @@ function App() {
         <p>My family members are {projectFamilies}</p>
         <p>Employee Age {employeeOne.age}</p>
         <p>Empoyee Name {employeeOne.name}</p>
+        <p>Welcome ghana</p>
     </>
   )
 }
