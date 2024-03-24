@@ -1,11 +1,13 @@
 import './App.css'
 import React from "react";
+import InputField from "./components/InputField.tsx";
 
 const App: React.FC = () => {
 
   return (
     <div className="App">
-        <h1 className="heading">Taskied</h1>
+        <span className="heading">Taskied</span>
+        <InputField/>
     </div>
   )
 }
