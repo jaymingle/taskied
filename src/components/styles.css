@@ -1,9 +1,13 @@
 .input{
-
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    background-color: red;
 }
 
 .input_box{
-
+    width: 100%;
 }
 
 .input_submit{
