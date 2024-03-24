@@ -1,16 +1,19 @@
 import React from 'react';
 import "./styles.css"
 
-const InputField = () => {
 
-    const formSubmitHandler = e => {
-        e.preventDefault();
-    }
+interface Props{
+    todo: string,
+    setTodo:  React.Dispatch<React.SetStateAction<string>>
+}
+
+
+const InputField: React.FC<Props> = ({todo, setTodo}) => {
 
     return (
         <div>
-            <form onSubmit={formSubmitHandler} className="input">
-                <input type="text" placeholder="Enter a task" className="input_box"/>
+            <form className="input">
+                <input type="text" value={todo} onChange={e => setTodo(e.target.value)} placeholder="Enter a task" className="input_box"/>
                 <input type="submit" value="Go" className="input_submit"/>
             </form>
         </div>
