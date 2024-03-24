@@ -1,13 +1,13 @@
 .input{
     display: flex;
-    width: 100%;
+    width: 900px;
     position: relative;
     align-items: center;
-    background-color: red;
 }
 
 .input_box{
     width: 100%;
+    padding
 }
 
 .input_submit{
