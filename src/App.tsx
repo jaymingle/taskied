@@ -10,12 +10,12 @@ const App: React.FC = () => {
 
     const handleAdd = (e: React.FormEvent<EventTarget>): void => {
         e.preventDefault();
-        console.log(todo)
+        console.log('Todo Entered', todo)
 
         if(todo){
-            setTodos([...todos, {id: Date.now(), todo: todo, isDone: false}])
+            setTodos([...todos, {id: Date.now(), todo, isDone: false}])
         }
-        console.log(todos)
+        console.log( 'Todo Lists: ',todos)
 
         setTodo('')
     }
