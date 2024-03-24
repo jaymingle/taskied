@@ -6,8 +6,6 @@ const App: React.FC = () => {
 
     const [todo, setTodo] = useState<string>('')
 
-    console.log(todo)
-
   return (
     <div className="App">
         <span className="heading">Taskied</span>
