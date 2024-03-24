@@ -24,12 +24,7 @@ function App() {
 
   return (
     <>
-        <p>The name of the project owner is {projectOwnerName}</p>
-        <p>The Project Number is {projectOwnerAge} years old</p>
-        <p>My family members are {projectFamilies}</p>
-        <p>Employee Age {employeeOne.age}</p>
-        <p>Empoyee Name {employeeOne.name}</p>
-        <p>Welcome ghana</p>
+
     </>
   )
 }
