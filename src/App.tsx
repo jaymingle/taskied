@@ -2,6 +2,7 @@ import './App.css'
 import React, {useState} from "react";
 import InputField from "./components/InputField.tsx";
 import {Todo} from "./model.ts";
+import TodoList from "./components/TodoList.tsx";
 
 const App: React.FC = () => {
 
@@ -27,6 +28,7 @@ const App: React.FC = () => {
         {todos.map(todoItem =>
             <p>{todoItem.todo}</p>
         )}
+        <TodoList/>
     </div>
   )
 }
