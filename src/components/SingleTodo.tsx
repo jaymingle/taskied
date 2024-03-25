@@ -1,11 +1,21 @@
 import React from 'react';
 import './styles.css'
+import Todo from "../model.ts";
 
-const SingleTodo = ({todo: string}) => {
+type Props = {
+    todo: Todo,
+    todos: Todo[],
+    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
+
+}
+
+const SingleTodo = ({todo, todos, setTodos}:Props) => {
     return (
-        <div>
-
-        </div>
+        <form className="todos_single">
+            <span className="todos_single--text">
+                {todo.todo}
+            </span>
+        </form>
     );
 };
 
