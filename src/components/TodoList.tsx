@@ -11,6 +11,7 @@ const TodoList =  ({todos, setTodos}: Props) => {
     return (
         <div className="todos">
             {todos.map(todo => (
+                <SingleTodo/>
                 <div>
                     <p>{todo.todo}</p>
                 </div>
