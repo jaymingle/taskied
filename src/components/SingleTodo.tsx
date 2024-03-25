@@ -29,8 +29,8 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
 
     const handleEditForm = (e: React.FormEvent<EventTarget>, id: number): void => {
         e.preventDefault()
-        console.log(todo.todo)
-        console.log(id)
+        // console.log(todo.todo)
+        // console.log(id)
 
         setTodos(todos.map(todo => todo.id === id ? {...todo, todo: editTodo} : todo))
     }
