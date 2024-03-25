@@ -5,10 +5,13 @@ import SingleTodo from "./SingleTodo.tsx";
 
 interface Props{
     todos: Todo[],
-    setTodos:  React.Dispatch<React.SetStateAction<Todo[]>>
+    setTodos:  React.Dispatch<React.SetStateAction<Todo[]>>,
+    completedTodos: Todo[],
+    setCompletedTodos: React.Dispatch<React.SetStateAction<Todo[]>>
+
 }
 
-const TodoList =  ({todos, setTodos}: Props) => {
+const TodoList =  ({todos, setTodos, completedTodos, setCompletedTodos}: Props) => {
     return (
         <div className="container">
             <div className="todos">
