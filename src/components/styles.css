@@ -46,21 +46,35 @@
     box-shadow: 0 0 5px black;
 }
 
-.todos{
+.todos {
     display: flex;
     justify-content: space-evenly;
     width: 90%;
     flex-wrap: wrap;
 }
 
-.todos_single{
-
+.todos_single {
+    display: flex;
+    width: 29.5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url("https://img.freepik.com/free-vector/soft-yellow-watercolor-texture-background_1055-10236.jpg?w=2000&t=st=1711360445~exp=1711361045~hmac=2b131e1a9ae6cf9e748a7a4b360d316088c1f73a316cf8336f2b302a48394e79");
 }
 
-.todos_single--text{
-
+.todos_single--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
 }
 
-.icon{
+.todos_single--text:focus{
+    outline: none;
+}
 
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
 }
