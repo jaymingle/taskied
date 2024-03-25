@@ -1,6 +1,6 @@
 .input{
     display: flex;
-    width: 1000px;
+    width: 90% !important;
     position: relative;
     align-items: center;
 }
@@ -47,7 +47,7 @@
 }
 .container{
     display: flex;
-    width: 95%;
+    width: 90%;
     margin-top: 10px;
     justify-content: space-between;
     align-items: flex-start;
@@ -57,10 +57,10 @@
 .todos {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+    width: 47.5%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(50,195, 205);
 }
 
 .todos_single {
