@@ -34,12 +34,14 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
         setEdit(false)
     }
 
+    const inputRef = useRef<HTMLInputElement>(null)
+
     return (
         <form className="todos_single" onSubmit={e => handleEditForm(e, todo.id)}>
 
             {
                 edit ? (
-                    <input value={editTodo}  onChange={(e) => setEditTodo(e.target.value)} className="todos_edit_input"/>
+                    <input ref={inputRef} value={editTodo}  onChange={(e) => setEditTodo(e.target.value)} className="todos_edit_input"/>
                 ) : todo.isDone ? (
                     <s className="todos_single--text">{todo.todo}</s>
                 ) : (
