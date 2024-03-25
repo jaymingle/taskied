@@ -27,13 +27,16 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
         )
     }
 
-    const handleEditForm = (e: React.FormEvent<EventTarget>): void => {
+    const handleEditForm = (e: React.FormEvent<EventTarget>, id: number): void => {
         e.preventDefault()
         console.log(todo.todo)
+        console.log(id)
+
+        setTodos(todos.map(todo => todo.id === id ? {...todo, todo: editTodo} : todo))
     }
 
     return (
-        <form className="todos_single" onSubmit={handleEditForm}>
+        <form className="todos_single" onSubmit={e => handleEditForm(e, todo.id)}>
 
             {
                 edit ? (
