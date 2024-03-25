@@ -1,6 +1,6 @@
 .input{
     display: flex;
-    width: 900px;
+    width: 1000px;
     position: relative;
     align-items: center;
 }
@@ -45,7 +45,13 @@
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
 }
-.container{}
+.container{
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 
 .todos {
