@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css'
 
-const SingleTodo = () => {
+const SingleTodo = ({todo: string}) => {
     return (
         <div>
 
