@@ -1,6 +1,6 @@
 .input{
     display: flex;
-    width: 90% !important;
+    width: 1550px;
     position: relative;
     align-items: center;
 }
@@ -63,13 +63,22 @@
     background-color: rgb(50,195, 205);
 }
 
+.todos_heading{
+    font-size: 30px;
+    color: #ffffff;
+}
+
 .todos_single {
     display: flex;
-    width: 29.5%;
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
     background-image: url("https://img.freepik.com/free-vector/soft-yellow-watercolor-texture-background_1055-10236.jpg?w=2000&t=st=1711360445~exp=1711361045~hmac=2b131e1a9ae6cf9e748a7a4b360d316088c1f73a316cf8336f2b302a48394e79");
+    transition: 0.2s;
+}
+
+.todos_single:hover{
+
 }
 
 .todos_single--text {
