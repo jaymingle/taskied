@@ -32,7 +32,7 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
 
             {
                 edit ? (
-                   <input value={editTodo}  onChange={(e) => setEditTodo(e.target.value)}/>
+                   <input value={editTodo}  onChange={(e) => setEditTodo(e.target.value)} className="todos_edit_input"/>
                 ) : (
                     ''
                 )
