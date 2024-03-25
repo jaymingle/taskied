@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import './styles.css'
 import Todo from "../model.ts";
 import {AiFillEdit, AiFillDelete, AiFillCheckSquare,} from 'react-icons/ai'
@@ -33,6 +33,7 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
         // console.log(id)
 
         setTodos(todos.map(todo => todo.id === id ? {...todo, todo: editTodo} : todo))
+        setEdit(false)
     }
 
     return (
@@ -40,13 +41,13 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
 
             {
                 edit ? (
-                   <input value={editTodo}  onChange={(e) => setEditTodo(e.target.value)} className="todos_edit_input"/>
+                    <input value={editTodo}  onChange={(e) => setEditTodo(e.target.value)} className="todos_edit_input"/>
+                ) : todo.isDone ? (
+                    <s className="todos_single--text">{todo.todo}</s>
                 ) : (
-                    ''
-                )
-            }
+                    <span className="todos_single--text">{todo.todo}</span>
+                )}
 
-            <span className={`todos_single--text ${todo.isDone ? 'strikethrough' : ''}`}>{todo.todo}</span>
             <div>
                 <span className="icon" onClick={
                         () => {
