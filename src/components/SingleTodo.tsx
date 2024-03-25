@@ -27,8 +27,13 @@ const SingleTodo = ({todo, todos, setTodos}:Props) => {
         )
     }
 
+    const handleEditForm = (e: React.FormEvent<EventTarget>): void => {
+        e.preventDefault()
+        console.log(todo.todo)
+    }
+
     return (
-        <form className="todos_single">
+        <form className="todos_single" onSubmit={handleEditForm}>
 
             {
                 edit ? (
