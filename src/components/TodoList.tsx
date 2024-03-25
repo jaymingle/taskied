@@ -1,10 +1,20 @@
 import React from 'react';
 import './styles.css'
+import Todo from "../model.ts";
 
-const TodoList: React.FC =  () => {
+interface Props{
+    todos: Todo[],
+    setTodos:  React.Dispatch<React.SetStateAction<Todo[]>>
+}
+
+const TodoList =  ({todos, setTodos}: Props) => {
     return (
         <div className="todos">
-            TodoList
+            {todos.map(todo => (
+                <div>
+                    <p>{todo.todo}</p>
+                </div>
+            ))}
         </div>
     );
 };
