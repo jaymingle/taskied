@@ -22,6 +22,16 @@ const TodoList =  ({todos, setTodos}: Props) => {
                     />
                 ))}
             </div>
+            <div className="todos_remove">
+                {todos.map(todo => (
+                    <SingleTodo
+                        todo={todo}
+                        key={todo.id}
+                        todos={todos}
+                        setTodos={setTodos}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
