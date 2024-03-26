@@ -52,6 +52,9 @@ const App: React.FC = () => {
             complete.splice(destination.index, 0, add)
         }
 
+        setCompletedTodos(complete)
+        setTodos(active)
+
     }
 
 
