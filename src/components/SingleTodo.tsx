@@ -4,6 +4,7 @@ import Todo from "../model.ts";
 import {AiFillEdit, AiFillDelete, AiFillCheckSquare,} from 'react-icons/ai'
 
 type Props = {
+    index: number
     todo: Todo,
     todos: Todo[],
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
