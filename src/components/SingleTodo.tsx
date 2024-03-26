@@ -44,8 +44,14 @@ const SingleTodo = ({index, todo, todos, setTodos}:Props) => {
 
     return (
         <Draggable draggableId={todo.id.toString()} index={index}>
-            {() => (
-                <form className="todos_single" onSubmit={e => handleEditForm(e, todo.id)}>
+            {(provided) => (
+                <form
+                    className="todos_single"
+                    onSubmit={e => handleEditForm(e, todo.id)}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                    ref={provided.innerRef}
+                >
                     {
                         edit ? (
                             <input ref={inputRef} value={editTodo}  onChange={(e) => setEditTodo(e.target.value)} className="todos_edit_input"/>
