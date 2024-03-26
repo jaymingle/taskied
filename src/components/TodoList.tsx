@@ -34,12 +34,12 @@ const TodoList =  ({todos, setTodos, completedTodos, setCompletedTodos}: Props) 
                 {(provided) => (
                     <div className="todos remove" ref={provided.innerRef} {...provided.droppableProps}>
                         <span className="todos_heading">Completed Tasks</span>
-                        {todos.map(todo => (
+                        {completedTodos.map(todo => (
                             <SingleTodo
                                 todo={todo}
                                 key={todo.id}
                                 todos={todos}
-                                setTodos={setTodos}
+                                setTodos={setCompletedTodos}
                             />
                         ))}
                     </div>
