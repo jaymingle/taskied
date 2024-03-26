@@ -19,8 +19,9 @@ const TodoList =  ({todos, setTodos, completedTodos, setCompletedTodos}: Props) 
                 {(provided) => (
                     <div className="todos" ref={provided.innerRef} {...provided.droppableProps}>
                         <span className="todos_heading">Active Tasks</span>
-                        {todos.map(todo => (
+                        {todos.map((todo, index) => (
                             <SingleTodo
+                                index={index}
                                 todo={todo}
                                 key={todo.id}
                                 todos={todos}
