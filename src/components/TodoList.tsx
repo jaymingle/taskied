@@ -15,30 +15,36 @@ interface Props{
 const TodoList =  ({todos, setTodos, completedTodos, setCompletedTodos}: Props) => {
     return (
         <div className="container">
-            <Droppable>
-                <div className="todos">
-                    <span className="todos_heading">Active Tasks</span>
-                    {todos.map(todo => (
-                        <SingleTodo
-                            todo={todo}
-                            key={todo.id}
-                            todos={todos}
-                            setTodos={setTodos}
-                        />
-                    ))}
-                </div>
+            <Droppable droppableId='TodosList'>
+                {(provided) => (
+                    <div className="todos" ref={provided.innerRef} {...provided.droppableProps}>
+                        <span className="todos_heading">Active Tasks</span>
+                        {todos.map(todo => (
+                            <SingleTodo
+                                todo={todo}
+                                key={todo.id}
+                                todos={todos}
+                                setTodos={setTodos}
+                            />
+                        ))}
+                    </div>
+                )}
             </Droppable>
-            <div className="todos remove">
-                <span className="todos_heading">Completed Tasks</span>
-                {todos.map(todo => (
-                    <SingleTodo
-                        todo={todo}
-                        key={todo.id}
-                        todos={todos}
-                        setTodos={setTodos}
-                    />
-                ))}
-            </div>
+            <Droppable droppableId='TodosCompleted'>
+                {(provided) => (
+                    <div className="todos remove" ref={provided.innerRef} {...provided.droppableProps}>
+                        <span className="todos_heading">Completed Tasks</span>
+                        {todos.map(todo => (
+                            <SingleTodo
+                                todo={todo}
+                                key={todo.id}
+                                todos={todos}
+                                setTodos={setTodos}
+                            />
+                        ))}
+                    </div>
+                )}
+                </Droppable>
         </div>
     );
 };
