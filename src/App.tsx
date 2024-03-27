@@ -20,7 +20,6 @@ const App: React.FC = () => {
             setTodos([...todos, {id: Date.now(), todo, isDone: false}])
         }
         console.log( 'Todo Lists: ',todos)
-
         setTodo('')
     }
 
